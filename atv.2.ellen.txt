@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int SOMA(int *p1, int *p2 )
+{
+    int n3;
+  n3 = (*p1 + *p2);
+  return n3;
+}
+
+int Subtração(int *p1, int *p2 )
+{
+    int n3;
+  n3 = (*p1 - *p2);
+  return n3;
+}
+
+int Divisão(int *p1, int *p2 )
+{
+    int n3;
+  n3 = (*p1 / *p2);
+  return n3;
+}
+
+int Multiplicação(int *p1, int *p2 )
+{
+    int n3;
+  n3 = (*p1 * *p2);
+  return n3;
+}
+int main()
+{
+    int n1, n2;
+    int *p1,*p2;
+    
+    p1 = &n1;
+    p2 = &n2;
+    printf("Digite o primeiro valor: ");
+    scanf("%d", p1);
+    printf("Digite o segundo valor:");
+    scanf("%d", p2);
+    
+    
+    
+    printf("\nSoma dos valores: %d + %d: %d \n", *p1, *p2, (SOMA(p1,p2)) );
+    printf("\nSubtração dos valores:  %d + %d: %d \n", *p1, *p2, (Subtração(p1,p2)) );
+    printf("\nDivisão dos valores:  %d + %d: %d \n", *p1, *p2, (Divisão(p1,p2)) );
+    printf("\nMultiplicação dos valores: %d + %d: %d \n", *p1, *p2, (Multiplicação(p1,p2)) );
+    return 0;
+}
